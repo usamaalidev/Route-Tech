@@ -1,0 +1,284 @@
+/* =======> Variables */
+:root {
+  --dark-violet: #1c213e;
+  --light-violet: #242a4b;
+  --redish-orange: #ff394a;
+  --pink: #ff3c7e;
+  --white: #fff;
+  --light-white: #f1f1f1;
+  --mid-gray: #7f7f7f;
+}
+
+::selection {
+  color: var(--light-violet);
+  background-color: #c9c9e6;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-violet);
+  border-radius: 100vh;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--light-white);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-violet);
+  color: var(--light-white);
+}
+
+.scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: var(--pink);
+  z-index: 9999;
+  font-size: 28px;
+  display: none;
+  cursor: pointer;
+}
+
+.font-ubuntu {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.bg-light {
+  background-color: var(--light-white);
+  color: var(--dark-violet);
+}
+.bg-violet-dark {
+  background-color: var(--dark-violet);
+}
+.text-violet {
+  color: var(--dark-violet);
+}
+/* =======> Header */
+
+header {
+  background-image: linear-gradient(#1c213eaa, #1c213eaa),
+    url(../images/route\ tech\ background.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+nav {
+  width: fit-content;
+  left: 0;
+  z-index: 99999;
+  background-color: var(--dark-violet);
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+nav .logo img {
+  width: 130px;
+}
+
+nav ul {
+  width: 100%;
+}
+
+nav ul li {
+  width: 100%;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: #2f365f;
+}
+
+nav ul li a i {
+  width: 25px;
+}
+
+.nav-content {
+  width: fit-content;
+}
+
+.colors .color {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #f675a8;
+}
+
+.blue {
+  background-color: #1746a2;
+}
+
+.green {
+  background-color: #59ce8f;
+}
+
+.yellow {
+  background-color: #ffc54d;
+}
+
+.open-nav i {
+  animation: moving-left 700ms infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes moving-left {
+  0% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(3px);
+  }
+}
+
+.header-content h1 span {
+  display: block;
+  margin-block: 0;
+}
+
+.header-content h1 span:nth-child(2) {
+  margin-left: 55px;
+}
+
+.header-content h1 span:nth-child(3) {
+  margin-left: 80px;
+}
+
+/* =====> Event */
+
+.counter {
+  padding-bottom: 10px;
+}
+
+.counter > * {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  color: var(--dark-violet);
+  transition: scale 350ms;
+  position: relative;
+  box-shadow: 0 0 22px 5px inset #3335;
+}
+
+.counter > *:hover {
+  scale: 1.1;
+}
+
+.counter .days {
+  --percent: 70;
+}
+.counter .hours {
+  --percent: 50;
+}
+.counter .minutes {
+  --percent: 60;
+}
+.counter .seconds {
+  --percent: 20;
+}
+
+.counter > *::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  left: -10px;
+  top: -10px;
+  background-image: conic-gradient(
+    var(--pink) calc(var(--percent) * 3.6deg),
+    #f1f1f1 0deg
+  );
+  z-index: -9;
+  border-radius: inherit;
+}
+
+.accordion {
+  max-width: 600px;
+  background-color: var(--dark-violet);
+  color: var(--light-white);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.question {
+  transition: background-color 350ms;
+  cursor: pointer;
+}
+
+.question:hover {
+  background-color: #151a34;
+}
+
+.answer {
+  display: none;
+  background-color: #f1f1f1;
+  color: var(--dark-violet);
+  margin: 0;
+}
+
+form textarea {
+  min-height: 150px !important;
+  max-height: 300px !important;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff;
+  outline: 0;
+  box-shadow: none;
+}
+
+.contact img {
+  max-width: 550px;
+}
+
+.social-links a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 40px;
+  aspect-ratio: 1/1;
+  background-color: var(--dark-violet);
+  color: #fff;
+  cursor: pointer;
+  transition: scale 350ms, box-shadow 350ms;
+}
+
+.social-links a:hover {
+  scale: 1.1;
+  box-shadow: 4px 4px 0 0 var(--pink), -4px -4px 0 0 var(--redish-orange);
+}
+
+.heart {
+  color: #eb1d36;
+}
+
+a.developer {
+  position: relative;
+  isolation: isolate;
+  color: var(--dark-violet);
+}
+
+a.developer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background-color: #f2d388;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: height 350ms;
+}
+
+a.developer:hover::before {
+  height: 50%;
+}
