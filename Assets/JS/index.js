@@ -63,8 +63,8 @@ $(document).ready(function () {
   // Implementing Counter Down
 
   const counterDown = setInterval(() => {
-    const eventDate = new Date(2023, 3, 23);
-    const StartDate = new Date(2023, 1, 1);
+    const eventDate = new Date(2024, 10, 25);
+    const StartDate = new Date(2023, 6, 30);
     const allDaysLeft = (eventDate - StartDate) / 1000 / 60 / 60 / 24;
     const now = new Date();
     const remainTime = eventDate - now;
